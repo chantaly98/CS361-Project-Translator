@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Adapted code for basic translator services from Coding Nepal - https://www.codingnepalweb.com/language-translator-app-html-css-javascript/ -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Translator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+    <nav>
+        <div class="heading">
+            <h4> Translator </h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#top">Translate</a></li>
+            <li><a href="#save-text">Saved</a></li>
+            <li><a href="#about-text">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 id="translator-header">Translations</h2>
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Enter text here"></textarea>
+                <textarea class="to-text" placeholder="Translation" readonly="" disabled=""></textarea>
+            </div>
+
+        <ul class="controls">
+            <li class="row from">
+                <div class="icons">
+                    <span id="from-volume" class="material-symbols-outlined">
+                        volume_up
+                    </span>
+                    <span id="from-save" class="material-symbols-outlined">
+                        book
+                    </span>
+                </div>
+                <select> <option value="am-ET" undefined="">Amharic</option><option value="ar-SA" undefined="">Arabic</option><option value="be-BY" undefined="">Bielarus</option><option value="bem-ZM" undefined="">Bemba</option><option value="bi-VU" undefined="">Bislama</option><option value="bjs-BB" undefined="">Bajan</option><option value="bn-IN" undefined="">Bengali</option><option value="bo-CN" undefined="">Tibetan</option><option value="br-FR" undefined="">Breton</option><option value="bs-BA" undefined="">Bosnian</option><option value="ca-ES" undefined="">Catalan</option><option value="cop-EG" undefined="">Coptic</option><option value="cs-CZ" undefined="">Czech</option><option value="cy-GB" undefined="">Welsh</option><option value="da-DK" undefined="">Danish</option><option value="dz-BT" undefined="">Dzongkha</option><option value="de-DE" undefined="">German</option><option value="dv-MV" undefined="">Maldivian</option><option value="el-GR" undefined="">Greek</option><option value="en-GB" selected="">English</option><option value="es-ES" undefined="">Spanish</option><option value="et-EE" undefined="">Estonian</option><option value="eu-ES" undefined="">Basque</option><option value="fa-IR" undefined="">Persian</option><option value="fi-FI" undefined="">Finnish</option><option value="fn-FNG" undefined="">Fanagalo</option><option value="fo-FO" undefined="">Faroese</option><option value="fr-FR" undefined="">French</option><option value="gl-ES" undefined="">Galician</option><option value="gu-IN" undefined="">Gujarati</option><option value="ha-NE" undefined="">Hausa</option><option value="he-IL" undefined="">Hebrew</option><option value="hi-IN" undefined="">Hindi</option><option value="hr-HR" undefined="">Croatian</option><option value="hu-HU" undefined="">Hungarian</option><option value="id-ID" undefined="">Indonesian</option><option value="is-IS" undefined="">Icelandic</option><option value="it-IT" undefined="">Italian</option><option value="ja-JP" undefined="">Japanese</option><option value="kk-KZ" undefined="">Kazakh</option><option value="km-KM" undefined="">Khmer</option><option value="kn-IN" undefined="">Kannada</option><option value="ko-KR" undefined="">Korean</option><option value="ku-TR" undefined="">Kurdish</option><option value="ky-KG" undefined="">Kyrgyz</option><option value="la-VA" undefined="">Latin</option><option value="lo-LA" undefined="">Lao</option><option value="lv-LV" undefined="">Latvian</option><option value="men-SL" undefined="">Mende</option><option value="mg-MG" undefined="">Malagasy</option><option value="mi-NZ" undefined="">Maori</option><option value="ms-MY" undefined="">Malay</option><option value="mt-MT" undefined="">Maltese</option><option value="my-MM" undefined="">Burmese</option><option value="ne-NP" undefined="">Nepali</option><option value="niu-NU" undefined="">Niuean</option><option value="nl-NL" undefined="">Dutch</option><option value="no-NO" undefined="">Norwegian</option><option value="ny-MW" undefined="">Nyanja</option><option value="ur-PK" undefined="">Pakistani</option><option value="pau-PW" undefined="">Palauan</option><option value="pa-IN" undefined="">Panjabi</option><option value="ps-PK" undefined="">Pashto</option><option value="pis-SB" undefined="">Pijin</option><option value="pl-PL" undefined="">Polish</option><option value="pt-PT" undefined="">Portuguese</option><option value="rn-BI" undefined="">Kirundi</option><option value="ro-RO" undefined="">Romanian</option><option value="ru-RU" undefined="">Russian</option><option value="sg-CF" undefined="">Sango</option><option value="si-LK" undefined="">Sinhala</option><option value="sk-SK" undefined="">Slovak</option><option value="sm-WS" undefined="">Samoan</option><option value="sn-ZW" undefined="">Shona</option><option value="so-SO" undefined="">Somali</option><option value="sq-AL" undefined="">Albanian</option><option value="sr-RS" undefined="">Serbian</option><option value="sv-SE" undefined="">Swedish</option><option value="sw-SZ" undefined="">Swahili</option><option value="ta-LK" undefined="">Tamil</option><option value="te-IN" undefined="">Telugu</option><option value="tet-TL" undefined="">Tetum</option><option value="tg-TJ" undefined="">Tajik</option><option value="th-TH" undefined="">Thai</option><option value="ti-TI" undefined="">Tigrinya</option><option value="tk-TM" undefined="">Turkmen</option><option value="tl-PH" undefined="">Tagalog</option><option value="tn-BW" undefined="">Tswana</option><option value="to-TO" undefined="">Tongan</option><option value="tr-TR" undefined="">Turkish</option><option value="uk-UA" undefined="">Ukrainian</option><option value="uz-UZ" undefined="">Uzbek</option><option value="vi-VN" undefined="">Vietnamese</option><option value="wo-SN" undefined="">Wolof</option><option value="xh-ZA" undefined="">Xhosa</option><option value="yi-YD" undefined="">Yiddish</option><option value="zu-ZA" undefined="">Zulu</option></select>
+            </li>
+
+            <li class="exchange">
+                    <span id="swap" class="material-symbols-outlined">
+                        swap_horiz
+                    </span>
+            </li>
+
+            <li class="row to">
+                <select> <option value="am-ET" undefined="">Amharic</option><option value="ar-SA" undefined="">Arabic</option><option value="be-BY" undefined="">Bielarus</option><option value="bem-ZM" undefined="">Bemba</option><option value="bi-VU" undefined="">Bislama</option><option value="bjs-BB" undefined="">Bajan</option><option value="bn-IN" undefined="">Bengali</option><option value="bo-CN" undefined="">Tibetan</option><option value="br-FR" undefined="">Breton</option><option value="bs-BA" undefined="">Bosnian</option><option value="ca-ES" undefined="">Catalan</option><option value="cop-EG" undefined="">Coptic</option><option value="cs-CZ" undefined="">Czech</option><option value="cy-GB" undefined="">Welsh</option><option value="da-DK" undefined="">Danish</option><option value="dz-BT" undefined="">Dzongkha</option><option value="de-DE" undefined="">German</option><option value="dv-MV" undefined="">Maldivian</option><option value="el-GR" undefined="">Greek</option><option value="en-GB" undefined="">English</option><option value="es-ES" selected="">Spanish</option><option value="et-EE" undefined="">Estonian</option><option value="eu-ES" undefined="">Basque</option><option value="fa-IR" undefined="">Persian</option><option value="fi-FI" undefined="">Finnish</option><option value="fn-FNG" undefined="">Fanagalo</option><option value="fo-FO" undefined="">Faroese</option><option value="fr-FR" undefined="">French</option><option value="gl-ES" undefined="">Galician</option><option value="gu-IN" undefined="">Gujarati</option><option value="ha-NE" undefined="">Hausa</option><option value="he-IL" undefined="">Hebrew</option><option value="hi-IN" undefined="">Hindi</option><option value="hr-HR" undefined="">Croatian</option><option value="hu-HU" undefined="">Hungarian</option><option value="id-ID" undefined="">Indonesian</option><option value="is-IS" undefined="">Icelandic</option><option value="it-IT" undefined="">Italian</option><option value="ja-JP" undefined="">Japanese</option><option value="kk-KZ" undefined="">Kazakh</option><option value="km-KM" undefined="">Khmer</option><option value="kn-IN" undefined="">Kannada</option><option value="ko-KR" undefined="">Korean</option><option value="ku-TR" undefined="">Kurdish</option><option value="ky-KG" undefined="">Kyrgyz</option><option value="la-VA" undefined="">Latin</option><option value="lo-LA" undefined="">Lao</option><option value="lv-LV" undefined="">Latvian</option><option value="men-SL" undefined="">Mende</option><option value="mg-MG" undefined="">Malagasy</option><option value="mi-NZ" undefined="">Maori</option><option value="ms-MY" undefined="">Malay</option><option value="mt-MT" undefined="">Maltese</option><option value="my-MM" undefined="">Burmese</option><option value="ne-NP" undefined="">Nepali</option><option value="niu-NU" undefined="">Niuean</option><option value="nl-NL" undefined="">Dutch</option><option value="no-NO" undefined="">Norwegian</option><option value="ny-MW" undefined="">Nyanja</option><option value="ur-PK" undefined="">Pakistani</option><option value="pau-PW" undefined="">Palauan</option><option value="pa-IN" undefined="">Panjabi</option><option value="ps-PK" undefined="">Pashto</option><option value="pis-SB" undefined="">Pijin</option><option value="pl-PL" undefined="">Polish</option><option value="pt-PT" undefined="">Portuguese</option><option value="rn-BI" undefined="">Kirundi</option><option value="ro-RO" undefined="">Romanian</option><option value="ru-RU" undefined="">Russian</option><option value="sg-CF" undefined="">Sango</option><option value="si-LK" undefined="">Sinhala</option><option value="sk-SK" undefined="">Slovak</option><option value="sm-WS" undefined="">Samoan</option><option value="sn-ZW" undefined="">Shona</option><option value="so-SO" undefined="">Somali</option><option value="sq-AL" undefined="">Albanian</option><option value="sr-RS" undefined="">Serbian</option><option value="sv-SE" undefined="">Swedish</option><option value="sw-SZ" undefined="">Swahili</option><option value="ta-LK" undefined="">Tamil</option><option value="te-IN" undefined="">Telugu</option><option value="tet-TL" undefined="">Tetum</option><option value="tg-TJ" undefined="">Tajik</option><option value="th-TH" undefined="">Thai</option><option value="ti-TI" undefined="">Tigrinya</option><option value="tk-TM" undefined="">Turkmen</option><option value="tl-PH" undefined="">Tagalog</option><option value="tn-BW" undefined="">Tswana</option><option value="to-TO" undefined="">Tongan</option><option value="tr-TR" undefined="">Turkish</option><option value="uk-UA" undefined="">Ukrainian</option><option value="uz-UZ" undefined="">Uzbek</option><option value="vi-VN" undefined="">Vietnamese</option><option value="wo-SN" undefined="">Wolof</option><option value="xh-ZA" undefined="">Xhosa</option><option value="yi-YD" undefined="">Yiddish</option><option value="zu-ZA" undefined="">Zulu</option></select>
+                <div class="icons">
+                    <span id="to-volume" class="material-symbols-outlined">
+                        volume_up
+                    </span>
+                    <span id="to-save" class="material-symbols-outlined">
+                        book
+                    </span>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <button class="translate-button"> Translate Text </button>
+        <button class="clear-button"> Clear Text</button>
+    </div>
+
+    <div class="body-text" id="save-text">
+        <h2 id="saved-header">
+            Saved Phrases
+        </h2>
+        <br>
+        <p>
+
+            </p><table id="save-table">
+                <thead>
+                    <tr>
+                    <th>Language Translated From</th>
+                    <th>Entered Text</th>
+                    <th>Language Translated To</th>
+                    <th>Received Translation</th>
+                    <th>Delete Entry</th>
+                    </tr>                
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+           </table>
+        <p></p>
+    </div>
+
+    <div class="footer">
+        <footer class="copyright"> Chantal Ramos © 2022 </footer>
+    </div>
+
+    <div class="body-text" id="about-text">
+        <h2 id="about-header">
+            Steps for Translation
+        </h2>
+        <p>
+            1. Select the language you want to translate from on the left.
+        </p>
+        <p>
+            2. Select the language would want to receive the translation in on the right.
+        </p>
+        <p>
+            3. Then, enter the word, phrase or sentence you would like translated into the left box.
+        </p>
+        <p>
+            4. Click the "Translate Text" button to get a translated result.
+        </p>
+
+        <br>
+        <h2>Icons</h2>
+        <p><span class="material-symbols-outlined">book</span> Save a translation by clicking the bookmark icon.  </p>
+        <p><span class="material-symbols-outlined">volume_up</span> To hear the text, click the speaker icon.</p> 
+        <p><span class="material-symbols-outlined">swap_horiz</span> Swap the languages by clicking the exchange icon in the middle.</p>     
+
+    </div>
+
+    <div class="footer">
+        <footer class="copyright"> Chantal Ramos © 2022 </footer>
+    </div>
+
+    <script src="backend/countries.js"></script>
+    <script src="backend/script.js"></script>
+    
+
+
+</body>
+</html>

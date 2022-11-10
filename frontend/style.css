@@ -1,12 +1,15 @@
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     background: #DADED4;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 .container{
+  margin-top: 250px;
+  margin-bottom: 75px;
   width:690px;
   background: #fff;
   border-radius: 7px;
@@ -26,6 +29,10 @@ body{
     border-radius: 5px;
     background: #4D774E;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container button:hover{
+    background-color: #76aa77
 }
 
 
@@ -120,6 +127,7 @@ nav{
     display: flex;
     justify-content: space-around;
     width: 30%;
+    text-align: center;
 }
 
 .nav-links li{
@@ -150,18 +158,22 @@ nav{
     background-color: #76aa77
 }
 
+
 .body-text{
     background: white;
     border-radius: 7px;
     padding: 20px;
-    height: 425px;
+    height: auto;
     text-align: center;
     width:690px;
+    margin-bottom: 75px;
 }
+
 
 h2{
     color: #39603D;
     font-weight: bold;
+    text-align: center;
 }
 
 p{
@@ -184,4 +196,21 @@ p{
 .copyright{
     color: #fff;
     padding: 12px;
+}
+
+table{
+    text-align:center;
+    border: collapse;
+}
+
+th{
+    background-color:#76aa77;
+}
+
+tr:nth-child(odd){
+    background-color: #A3BCB6;
+}
+
+tr:nth-child(even){
+    background-color: #DADED4;
 }
