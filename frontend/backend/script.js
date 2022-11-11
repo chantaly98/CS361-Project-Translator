@@ -1,6 +1,5 @@
 // Basic Translator Functions Based/Adapted from: https://www.codingnepalweb.com/language-translator-app-html-css-javascript/
 
-
 const fromText = document.querySelector(".from-text");
 toText = document.querySelector(".to-text");
 selectTag = document.querySelectorAll("select");
@@ -12,8 +11,6 @@ toVolumeIcon = document.getElementById("to-volume");
 fromSaveIcon = document.getElementById("from-save");
 toSaveIcon = document.getElementById("to-save");
 tbodyRef = document.getElementById("tbody");
-
-
 
 //change select tag to contain country information
 selectTag.forEach((tag, id) => {
@@ -33,15 +30,23 @@ selectTag.forEach((tag, id) => {
 
 //add event listener on translate button - connect to translator API
 translateBtn.addEventListener("click", () => {
-    let text = fromText.value,
-    translateFrom = selectTag[0].value,
-    translateTo = selectTag[1].value;
-    let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
-    //fetch api response and return it with a parsing object into js, and in another then method recieve the object
-    fetch(apiUrl).then(res => res.json()).then(data => {
-        toText.value = data.responseData.translatedText;
-    });
+    let text = fromText.value;
+    //if no text entered, set an alert box, else run api  
+        if (text == ""){
+            alert("No text entered to translate.")
+        } else {
+        translateFrom = selectTag[0].value,
+        translateTo = selectTag[1].value;
+        let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+        //fetch api response and return it with a parsing object into js, and in another then method recieve the object
+        fetch(apiUrl).then(res => res.json()).then(data => {
+            toText.value = data.responseData.translatedText;
+        }); 
+        }
 });
+
+
+
 
 
 //add event listener on clear button - reset the fromText and toText back to blank ''
@@ -135,3 +140,8 @@ function DeleteRow(){
     let tr = td.parentNode;
     tr.parentNode.removeChild(tr);
 };
+
+
+
+
+
