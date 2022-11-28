@@ -1,3 +1,5 @@
+//Languages to choose from to be translated 
+
 const countries = {
     "am-ET": "Amharic",
     "ar-SA": "Arabic",

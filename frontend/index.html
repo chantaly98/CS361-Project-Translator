@@ -26,9 +26,14 @@
         <h2 id="translator-header">Translations</h2>
         <div class="wrapper">
             <div class="text-input">
-                <textarea class="from-text" placeholder="Enter text here"></textarea>
-                <textarea class="to-text" placeholder="Translation" readonly="" disabled=""></textarea>
+                <textarea name="fromTxt" class="from-text" placeholder= "Enter text here"></textarea>
+                <textarea name="toTxt" class="to-text" placeholder= "Translation" readonly="" disabled=""></textarea>
             </div>
+            <div class="word-count">
+                <textarea name="fromCount" class="fromCount" readonly="" disabled=""></textarea>
+                <textarea name="toCount" class="toCount" readonly="" disabled=""></textarea>
+            </div>
+            
 
         <ul class="controls">
             <li class="row from">
@@ -63,7 +68,11 @@
         </ul>
         </div>
         <button class="translate-button"> Translate Text </button>
-        <button class="clear-button"> Clear Text</button>
+        <button class="clear-button" > Clear Text</button>
+        <button class="wordCount-button">Get Word Count</button>
+        <button class="random-button">Random Word</button>
+        </form>
+
     </div>
 
     <div class="body-text" id="save-text">
@@ -97,20 +106,40 @@
         <h2 id="about-header">
             Steps for Translation
         </h2>
-        <p>
+            <p>
             1. Select the language you want to translate from on the left.
-        </p>
-        <p>
+            </p>
+            <p>
             2. Select the language would want to receive the translation in on the right.
-        </p>
-        <p>
+            </p>
+            <p>
             3. Then, enter the word, phrase or sentence you would like translated into the left box.
-        </p>
-        <p>
+            </p>
+            <p>
             4. Click the "Translate Text" button to get a translated result.
-        </p>
+            </p>
+        <br>
+
+        <h2>Get Word Count</h2>
+            <p>
+            After translating you can now get a word count of each text. Click the "Get Word Count" button to get a break down of both texts.
+            </p>
+        <br>
+
+        <h2>Want to learn some random words?</h2>
+            <p>
+            1. Select the language you want on from the right and the left drop downs.
+            </p>
+            <p> 
+            2. Hit the "Random Word" button. A random word should now populate the left text box.
+            </p> 
+
+            <p>
+            3. Hit the "Translate Text" and receive a random word in your desired language!
+            </p>
 
         <br>
+
         <h2>Icons</h2>
         <p><span class="material-symbols-outlined">book</span> Save a translation by clicking the bookmark icon.  </p>
         <p><span class="material-symbols-outlined">volume_up</span> To hear the text, click the speaker icon.</p> 
@@ -122,8 +151,10 @@
         <footer class="copyright"> Chantal Ramos © 2022 </footer>
     </div>
 
-    <script src="backend/countries.js"></script>
-    <script src="backend/script.js"  ></script>
+    <script src="/backend/countries.js"></script>
+    <script src="/backend/script.js"  ></script>
+    <script src="/backend/randomWord.js"  ></script>
 
 </body>
 </html>
+

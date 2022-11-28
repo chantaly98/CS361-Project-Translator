@@ -35,6 +35,20 @@ body{
     background-color: #76aa77
 }
 
+.container .wordCount-button{
+    align-items: center;
+    width: 49%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #4D774E;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .wrapper{
     border-radius: 5px;
@@ -42,8 +56,7 @@ body{
 }
 
 .wrapper .text-input{
-    display:flex;
-    border-bottom: 1px solid #bbb;
+    display:flex
 }
 
 .text-input textarea{
@@ -57,7 +70,28 @@ body{
     padding: 10px 15px;
 }
 
-.text-input .sent-text{
+.text-input .to-text{
+    border-left: 1px solid #bbb;
+    border-radius: 0px;
+}
+
+.wrapper .word-count{
+    display:flex;
+    border-bottom: 1px solid #bbb;
+}
+
+.word-count textarea{
+    height: 30px;
+    width:100%;
+    border:none;
+    outline:none;
+    resize: none;
+    font: size 18px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.word-count .toCount{
     border-left: 1px solid #bbb;
     border-radius: 0px;
 }
