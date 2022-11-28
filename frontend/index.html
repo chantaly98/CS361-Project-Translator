@@ -25,9 +25,10 @@
     <div class="container">
         <h2 id="translator-header">Translations</h2>
         <div class="wrapper">
+        <form action="/" method="post" id="wordCountForm">
             <div class="text-input">
-                <textarea name="fromTxt" class="from-text" placeholder= "Enter text here"></textarea>
-                <textarea name="toTxt" class="to-text" placeholder= "Translation" readonly="" disabled=""></textarea>
+                <textarea name="fromTxt" class="from-text" placeholder= "Enter text here" form="wordCountForm"></textarea>
+                <textarea name="toTxt" class="to-text" placeholder= "Translation" form="wordCountForm" readonly=""></textarea>
             </div>
             <div class="word-count">
                 <textarea name="fromCount" class="fromCount" readonly="" disabled=""></textarea>
@@ -71,7 +72,7 @@
         <button class="clear-button" > Clear Text</button>
         <button class="wordCount-button">Get Word Count</button>
         <button class="random-button">Random Word</button>
-        </form>
+    </form>
 
     </div>
 
