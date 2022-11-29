@@ -6,8 +6,6 @@ var app = express();
 PORT = 3000;
 let {PythonShell} = require('python-shell');
 bodyParser = require('body-parser');
-
-
 app.use(express.static('frontend'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -21,7 +19,6 @@ app.use(bodyParser.json({type: 'application/vnd.api+json' }));
 app.get('/', function(req, res){
     res.sendFile(__dirname + "/" + "index.html")
     });
-
 
 //receive toTxt and fromTxt data from text boxes and send to the microservice
 app.post('/', function (req, res) {
@@ -53,8 +50,6 @@ app.post('/', function (req, res) {
     }
 
 });
-
-
 
 /*
     LISTENER

@@ -56,6 +56,7 @@ translateBtn.addEventListener("click", () => {
 
 
 //sleep timer for functions that involve the microservice
+//use sleep function to allow microservice enough time to run before fetching results
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 } 
@@ -67,7 +68,7 @@ wordCountBtn.addEventListener("click", () => {
         alert("No text entered to translate.")
     } else {
     //get and display word count for toText box
-    sleep(2000).then(() => (
+    sleep(3000).then(() => (
         fetch('/microservice/CCA1.json', {mode: 'no-cors'})
         .then(response => response.text())
         .then(data=> {
@@ -75,7 +76,7 @@ wordCountBtn.addEventListener("click", () => {
         .catch(error => console.error(error))
     ));
     //get and display word count for fromText box
-    sleep(2000).then(() => (   
+    sleep(3000).then(() => (   
         fetch('/microservice/CCA2.json', {mode: 'no-cors'})
         .then(response => response.text())
         .then(data=> {
